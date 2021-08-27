@@ -22,6 +22,7 @@ section {
 }
 
 div {
+    background: red;
     margin: auto;
     width: 100px;
 }
