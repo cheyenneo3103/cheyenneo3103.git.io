@@ -1,5 +1,6 @@
 body {
   background-image: url(blackmarble.jpg);
+  background-size: cover;
   color: white;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   margin: 0;
