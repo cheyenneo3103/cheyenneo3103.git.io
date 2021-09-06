@@ -1,7 +1,5 @@
 body {
-  background-image: url(blackmarble.jpg);
-  background-size: cover;
-  color: white;
+  color: whitesmoke;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -9,8 +7,7 @@ body {
 }
 
 header {
-    background-image: url(blackmarble.jpg);
-    background: black;
+    background: whitesmoke;
     color: #E5CD7C;
     padding: 20px;
     text-align: center;
@@ -31,7 +28,7 @@ div {
 
 ul {
    background-image: url(quartz.jpg);
-   background-color: #04AA6D;
+   /*background-color: #04AA6D;*/
    color: white;
    padding: 16px;
    font-size: 16px;
@@ -52,8 +49,8 @@ footer {
 
 /* Dropdown Button */
 .dropbtn {
-/*(background-color: #04AA6D;*/
-color: white;
+/*background-color: #04AA6D;*/
+color: black;
 padding: 16px;
 font-size: 16px;
 border: none;
