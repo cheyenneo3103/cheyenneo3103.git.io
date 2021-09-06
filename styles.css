@@ -1,7 +1,6 @@
 body {
   background-image: url(blackmarble.jpg);
-  background-size: cover;
-  color: #E5CD7C;
+  color: white;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -9,6 +8,7 @@ body {
 }
 
 header {
+    background-image: url(blackmarble.jpg);
     background: black;
     color: #E5CD7C;
     padding: 20px;
@@ -29,10 +29,11 @@ div {
 }
 
 ul {
+   background-image: url(quartz.jpg);
    background-color: #04AA6D;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
+   color: white;
+   padding: 16px;
+   font-size: 16px;
    border: none;
 }
 
