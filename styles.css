@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
+  font-size: 16px;
 }
 
 header {
@@ -11,6 +12,7 @@ header {
     color: #E5CD7C;
     padding: 20px;
     text-align: center;
+    font-size: 24px;
 }
 
 section {
