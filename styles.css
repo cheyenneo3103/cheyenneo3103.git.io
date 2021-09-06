@@ -1,5 +1,5 @@
 body {
-  color: #F3DFE5;
+  color: #D5C2C7;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -28,7 +28,7 @@ div {
 
 ul {
    /*background-image: url(quartz.jpg);*/
-   background-color: #F3DFE5;
+   background-color: #D5C2C7;
    color: white;
    padding: 16px;
    font-size: 16px;
@@ -49,9 +49,9 @@ footer {
 
 /* Dropdown Button */
 .dropbtn {
-/*background-color: #04AA6D;*/
+background-color: #D5C2C7;
 color: black;
-/*padding: 16px;*/
+padding: 16px;
 font-size: 16px;
 border: none;
 text-align: center;
@@ -88,5 +88,5 @@ display: block;
 .dropdown:hover .dropdown-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown:hover .dropbtn {background-color: #BD8594;}
   
