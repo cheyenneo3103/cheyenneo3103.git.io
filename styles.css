@@ -1,5 +1,5 @@
 body {
-  background: rgb(58, 58, 58);
+  background-image: url(marble.jpg);
   color: white;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   margin: 0;
@@ -44,6 +44,8 @@ footer {
     padding: 10px 20px;
 }
 
+/*===============================================================================================================*/
+
 /* Dropdown Button */
 .dropbtn {
 background-color: #04AA6D;
@@ -51,6 +53,7 @@ color: white;
 padding: 16px;
 font-size: 16px;
 border: none;
+text-align: center;
 }
 
 /* The container <div> - needed to position the dropdown content */
