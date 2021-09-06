@@ -1,5 +1,5 @@
 body {
-  color: whitesmoke;
+  color: #F3DFE5;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background: #CE6689;
+    background-image: url(quartz.jpg);
     color: #E5CD7C;
     padding: 20px;
     text-align: center;
@@ -27,8 +27,8 @@ div {
 }
 
 ul {
-   background-image: url(quartz.jpg);
-   /*background-color: #04AA6D;*/
+   /*background-image: url(quartz.jpg);*/
+   background-color: #F3DFE5;
    color: white;
    padding: 16px;
    font-size: 16px;
