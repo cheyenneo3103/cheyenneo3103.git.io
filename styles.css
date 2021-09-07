@@ -28,6 +28,10 @@ div {
     width: 100px;
 }
 
+div.a {
+  width: 75%;
+}
+
 ul {
    /*background-image: url(quartz.jpg);*/
    background-color: #D5C2C7;
