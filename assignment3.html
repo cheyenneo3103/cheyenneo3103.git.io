@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+      <title>Assignment 3</title>
+        <link rel="stylesheet"
+        href="styles.css">
+
+      <meta name="description" content="Form for assignment 3.">
+      <meta name="keywords" content="HTML, CSS, JavaScript">
+      <meta name="author" content="Cheyenne Osborne">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+              <ul>
+                <li><a href="index.html">Home</a>
+                  <div class="dropdown">
+                    <button class="dropbtn">Assignments</button>
+                      <div class="dropdown-content">
+                        <a href="assignments.html">All Assignments</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-1/">Assignment 1</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-2/">Assignment 2</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-3/">Assignment 3</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-4/">Assignment 4</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-5/">Assignment 5</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-6/">Assignment 6</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-7/">Assignment 7</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-8/">Assignment 8</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-9/">Assignment 9</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-10/">Assignment 10</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-11/">Assignment 11</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-12/">Assignment 12</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-13/">Assignment 13</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-14/">Assignment 14</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-15/">Assignment 15</a>
+                      </div>
+                    </div>
+                    
+                    <div class="dropdown">
+                        <button class="dropbtn">Projects</button>
+                          <div class="dropdown-content">
+                            <a href="other.html">All Projects</a>
+                            <a href="index.html">Project 1</a>
+                            <a href="assignment2.html">Project 2</a>
+                            <a href="assignment3.html">Project 3</a>
+                          </div>
+                        </div>
+                </li>
+            </ul>
+          </nav>
+        </header>
+        <h1>Project 3 - Form Validation</h1>
+        <div class="a"><p>Here is a form to fill out.
+          <br>
+          <br>
+          <form name="gform" id="gform" enctype="text/plain" action="mailto:cheyenne_osborne@daytonastate.edu" method="post" onsubmit="submitted=true;">
+            <label for="entry.2107509977">First Name:<br></label>
+            <input type="text" name="First Name" id="entry.2107509977" required><br>
+            <label for="entry.777334708">Last Name:<br></label>
+            <input type="text" name="Last Name" id="entry.777334708" required><br>
+            <label for="entry.965726825">US Addresses Only<br>Street(House) Number:<br></label>
+            <input type="text" name="Street(House) Number" id="entry.965726825" pattern="^[0-9]+$" maxlength="6" required><br>
+            <label for="entry.165362596">Street Name:<br></label>
+            <input type="text" name="Street Name" id="entry.165362596" pattern="^[a-z][a-z\s]*$" maxlength="50" required><br>
+            <label for="entry.1861142526">Street Abbreviation (Capital Letters Only):<br></label>
+            <input type="text" name="Street Abbreviation" id="entry.1861142526" pattern="ALLEY||AVE||AV||BLVD||BR||CYN||
+            CTR||CIR||CT||CRES||DR||E||EXPWY||FWY||HWY||HILL||INFO||INTL||ISL||JCT||LN||LK||LP||
+            MT||MTN||N||NATL||NE||NW||PKWY||PL||PLZ||PT||R||RD||RTE||SQ||S||SE||SQ||ST||TER||THWY||
+            TR||TPK||WAY||W" maxlength="5" required><br>
+            <label for="entry.289470484">City (Capital Letters Only):<br></label>
+            <input type="text" name="City" id="entry.289470484" pattern="^[a-z][a-z\s]*$" max length="50" required><br>
+            <label for="entry.1054065235">State:<br></label>
+            <input type="text" name="State" id="entry.1054065235" pattern="AL||AK||AZ||AR||CA||CO||CT||
+            DE||DC||FL||GA||HI||ID||IL||IN||IA||KS||KY||LA||ME||MD||MA||MI||MN||MS||MO||MT||NB||NV||
+            NH||NJ||NM||NY||NC||ND||OH||OK||OR||PA||PR||RI||SC||SD||TN||TX||UT||VT||VA||WA||WV||WI||WY" maxlength="2"required><br>
+            <label for="entry.693994102">Zip Code:<br></label>
+            <input type="number" name="Zip Code" id="entry.693994102" pattern="[0-9]{5}" required><br>
+            <label for="entry.2010543124">Phone Number (Format: XXXXXXXXXX):<br></label>
+            <input type="tel" name="Phone Number" id="entry.2010543124" pattern="[0-9]{10}" required><br>
+            <label for="entry.742874748">Email Address:<br></label>
+            <input type="email" name="Email Address" id="entry.742874748" required><br>
+            <label for="entry.1588472551">Birth Date:<br></label>
+            <input type="date" name="Birth Date" id="entry.1588472551" max="2005-01-01" min="1930-01-01" required><br>
+            <label for="entry.1956245570">Message:<br></label>
+            <textarea name="Message" id="entry.1956245570" class="morelines" rows="4" cols="30" required></textarea><br><br><br>
+            <label for="entry.1796325525">Verification: Current (46th) President Last Name:<br></label>
+            <input type="text" name="Current President" id="entry.1796325525" pattern="Biden||biden||BIDEN||bIdEn||BiDeN" required><br><br>          
+            <input type="submit" value="Confirm & Email">
+          </form>
+
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+          <!---<iframe name="hidden_iframe2" id="hidden_iframe2" style="display:none;"></iframe>--->
+
+
+          
+        <script>
+
+           /* function OnSubmit1() {
+              document.gform.action="mailto:cheyenne_osborne@daytonastate.edu";
+              document.gform.target="hidden_iframe2";
+              document.gform.submit();
+              document.gform.action="https://docs.google.com/forms/d/1-pUjMR1xEXUr5f06QYPHtT4ukg6brHnnrTjL6qiWgtI/formResponse?";
+              document.gform.target="hidden_iframe";
+              document.gform.submit();*/
+
+            function validateForm() {
+               var fname = document.forms["gform"]["entry.2107509977"].value;
+               return validateNotBlank(fname, "entry.2107509977");
+               var lname = document.forms["gform"]["entry.777334708"].value;
+               return validateNotBlank(lname, "entry.777334708");
+               var phonenum = document.forms["gform"]["entry.2010543124"].value;
+               return validateNotBlank(phonenum, "entry.2010543124");
+               var email = document.forms["gform"]["entry.742874748"].value;
+               return validateNotBlank(email, "entry.742874748")
+               var bdate = document.forms["gform"]["entry.1588472551"].value;
+               return validateNotBlank(bdate, "entry.1588472551");
+               var message = document.forms["gform"]["entry.1956245570"].value;
+               return validateNotBlank(message, "entry.1956245570");
+               var president = document.forms["gform"]["entry.1796325525"].value;
+               return validateNotBlank(president, "entry.1796325525");
+            }
+            
+            function validateNotBlank(value, label) {
+                if (value==null || value=="") {
+                    alert("Please enter a value for " + label);
+                    return false;
+                }
+                return true;   
+            }
+
+        </script>
+
+        <script src="jquery-3.6.0.min.js"></script>
+        <script type="text/javascript">var submitted=false;</script>
+        <script type="text/javascript">
+            $('#gform').on('submit', function(e) {
+            $('#gform *').fadeOut(500);
+            $('#gform').prepend('Your submission has been processed...');
+            });
+        </script>
+
+    <div class="a"><footer><p>Contact Me: cheyenne_osborne@daytonastate.edu</p></footer></div>
+    </body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+      <title>Assignment 3</title>
+        <link rel="stylesheet"
+        href="styles.css">
+
+      <meta name="description" content="Form for assignment 3.">
+      <meta name="keywords" content="HTML, CSS, JavaScript">
+      <meta name="author" content="Cheyenne Osborne">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+              <ul>
+                <li><a href="index.html">Home</a>
+                  <div class="dropdown">
+                    <button class="dropbtn">Assignments</button>
+                      <div class="dropdown-content">
+                        <a href="assignments.html">All Assignments</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-1/">Assignment 1</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-2/">Assignment 2</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-3/">Assignment 3</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-4/">Assignment 4</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-5/">Assignment 5</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-6/">Assignment 6</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-7/">Assignment 7</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-8/">Assignment 8</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-9/">Assignment 9</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-10/">Assignment 10</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-11/">Assignment 11</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-12/">Assignment 12</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-13/">Assignment 13</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-14/">Assignment 14</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-15/">Assignment 15</a>
+                      </div>
+                    </div>
+                    
+                    <div class="dropdown">
+                        <button class="dropbtn">Projects</button>
+                          <div class="dropdown-content">
+                            <a href="other.html">All Projects</a>
+                            <a href="index.html">Project 1</a>
+                            <a href="assignment2.html">Project 2</a>
+                            <a href="assignment3.html">Project 3</a>
+                          </div>
+                        </div>
+                </li>
+            </ul>
+          </nav>
+        </header>
+        <h1>Project 3 - Form Validation</h1>
+        <div class="a"><p>Here is a form to fill out.
+          <br>
+          <br>
+          <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/1-pUjMR1xEXUr5f06QYPHtT4ukg6brHnnrTjL6qiWgtI/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+            <label for="entry.2107509977">First Name:<br></label>
+            <input type="text" name="entry.2107509977" id="entry.2107509977" required><br>
+            <label for="entry.777334708">Last Name:<br></label>
+            <input type="text" name="entry.777334708" id="entry.777334708" required><br>
+            <label for="entry.2010543124">Phone Number (Format: XXXXXXXXXX):<br></label>
+            <input type="tel" name="entry.2010543124" id="entry.2010543124" pattern="[0-9]{10}" required><br>
+            <label for="entry.742874748">Email Address:<br></label>
+            <input type="email" name="entry.742874748" id="entry.742874748" required><br>
+            <label for="entry.1588472551">Birth Date:<br></label>
+            <input type="date" name="entry.1588472551" id="entry.1588472551" max="2005-01-01" min="1930-01-01" required><br>
+            <label for="entry.1956245570">Message:<br></label>
+            <textarea name="entry.1956245570" id="entry.1956245570" class="morelines" rows="4" cols="30" required></textarea><br>
+            <!---<input type="textarea" name="entry.1956245570" id="entry.1956245570" rows="4" cols="50" required><br> --->
+            <label for="entry.1796325525">46th (Current) President:<br></label>
+            <input type="text" name="entry.1796325525" id="entry.1796325525" pattern="Biden||biden||BIDEN||bIdEn||BiDeN" required><br><br>          
+            <input type="submit" value="Submit">
+          </form>
+
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+          
+        <script>
+            function validateForm() {
+               var fname = document.forms["gform"]["entry.2107509977"].value;
+               return validateNotBlank(fname, "entry.2107509977");
+               var lname = document.forms["gform"]["entry.777334708"].value;
+               return validateNotBlank(lname, "entry.777334708");
+               var phonenum = document.forms["gform"]["entry.2010543124"].value;
+               return validateNotBlank(phonenum, "entry.2010543124");
+               var email = document.forms["gform"]["entry.742874748"].value;
+               return validateNotBlank(email, "entry.742874748")
+               var bdate = document.forms["gform"]["entry.1588472551"].value;
+               return validateNotBlank(bdate, "entry.1588472551");
+               var message = document.forms["gform"]["entry.1956245570"].value;
+               return validateNotBlank(message, "entry.1956245570");
+               var president = document.forms["gform"]["entry.1796325525"].value;
+               return validateNotBlank(president, "entry.1796325525");
+            }
+            
+            function validateNotBlank(value, label) {
+                if (value==null || value=="") {
+                    alert("Please enter a value for " + label);
+                    return false;
+                }
+                return true;    
+                }
+        </script>
+
+        <script src="jquery-3.6.0.min.js"></script>
+        <script type="text/javascript">var submitted=false;</script>
+        <script type="text/javascript">
+            $('#gform').on('submit', function(e) {
+            $('#gform *').fadeOut(500);
+            $('#gform').prepend('Your submission has been processed...');
+            });
+        </script>
+
+    <div class="a"><footer><p>Contact Me: cheyenne_osborne@daytonastate.edu</p></footer></div>
+    </body>
+
+</html>

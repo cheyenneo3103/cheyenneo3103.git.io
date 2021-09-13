@@ -76,6 +76,12 @@ a:visited {
   color: #320914;
 }
 
+.moreLines {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*===============================================================================================================*/
 
 /* Dropdown Button */
