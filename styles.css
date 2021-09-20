@@ -29,13 +29,19 @@ section {
 }
 
 div {
-    margin: auto;
-    width: 100px;
+    margin: auto; 
+    width: auto; /*change to 100px after a4*/
 }
 
 div.a {
   width: 75%;
   padding-bottom: 50px;
+}
+
+div.container {
+  min-width: auto; 
+  height: 400px; 
+  margin: auto;
 }
 
 img.center {
@@ -56,6 +62,7 @@ ul {
 li {
   display: inline-block;
   margin-right: 20px;
+  margin-left: 20px;
 }
 
 footer {

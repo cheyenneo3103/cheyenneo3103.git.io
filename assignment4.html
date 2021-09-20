@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+      <title>Project 4</title>
+        <link rel="stylesheet"
+        href="styles.css">
+
+      <meta name="description" content="Assignment 4 for COP4813">
+      <meta name="keywords" content="HTML, CSS, JavaScript, Menus">
+      <meta name="author" content="Cheyenne Osborne">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+              <ul>
+                <li><a href="index.html">Home</a>
+                  <div class="dropdown">
+                    <button class="dropbtn">Assignments</button>
+                      <div class="dropdown-content">
+                        <a href="assignments.html">All Assignments</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-1/">Assignment 1</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-2/">Assignment 2</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-3/">Assignment 3</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-4/">Assignment 4</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-5/">Assignment 5</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-6/">Assignment 6</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-7/">Assignment 7</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-8/">Assignment 8</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-9/">Assignment 9</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-10/">Assignment 10</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-11/">Assignment 11</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-12/">Assignment 12</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-13/">Assignment 13</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-14/">Assignment 14</a>
+                        <a href="http://roneaglin.online/cop4813/home/assignments/assignment-15/">Assignment 15</a>
+                      </div>
+                  </div>
+                    
+                    <div class="dropdown">
+                      <button class="dropbtn">Projects</button>
+                        <div class="dropdown-content">
+                          <a href="other.html">All Projects</a>
+                            <a href="index.html">Project 1</a>
+                            <a href="assignment2.html">Project 2</a>
+                            <a href="assignment3.html">Project 3</a>
+                            <a href="assignment4.html">Project 4</a>
+                        </div>
+                    </div>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <h1>Project 4 - Graphing</h1>
+        <div class="a"><p>Here is a Sine Function Graph.
+        <br>
+        
+        <h2>Sine Transformation Calculator</h2>
+        <div class="b">
+        y = a sin (bx + c) + d<br/><br/>
+
+        <label for="a">Amplitude a: </label>
+        <input type="text" name="a" id="a" size="5" value="4"/><br>
+        <label for="a">Period b: </label>
+        <input type="text" name="b" id="b" size="5" value="1" /><br>
+        <label for="a">Phase Shift c: </label>
+        <input type="text" name="c" id="c" size="5" value="2"/><br>
+        <label for="a">Vertical Shift d: </label>
+        <input type="text" name="d" id="d" size="5" value="3"/><br>
+        <label for="a">X Min</label>
+        <input type="text" name="xmin" id="xmin" value="-10" size="5"/><br>
+        <label for="a">X Max</label>
+        <input type="text" name="xmax" id="xmax" value="10" size="5" /><br><br>
+    
+        <input type="button" value="Calculate" id="calculate"/>
+        <input type="button" value="Plot" id="plot"/>
+
+        <br/><br/>
+        <p id="output"> </p> 
+        <div id="container"><br><br> </div>
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="jquery-3.6.0.min.js"></script>
+        <script>
+
+        var a = 0;
+        var b = 0;
+        var c = 0;
+        var d = 0;
+        var n = 0;
+        var x = new Array();
+        var y = new Array(); 
+        var v = new Array();
+
+        function calculateY(a, b, c, d, x) {
+            return a * Math.sin(b * x + c) + d;
+        }
+
+        function calculate() {
+            a = Number($('#a').val());
+            b = Number($('#b').val());
+            c = Number($('#c').val());
+            d = Number($('#d').val());
+            var xmin = Number($('#xmin').val());
+            var xmax = Number($('#xmax').val());
+            var xt = 0;
+    
+            var i = 0;
+            for (xt = xmin; xt <= xmax; xt++) {
+                x[i] = xt;
+                y[i] = calculateY(a, b, c, d, xt);
+                v[i] = [x[i], y[i]];
+                i++;
+            }
+            n = i - 1;   
+        }
+
+        function displayValues() {
+            var s = "";
+    
+            s = "Y = " + a + "sin (";
+            s+= b + "x + " + c + ") + ";
+            s+= d + "<br/>";
+    
+            for (var i = 0; i <= n; i++) {
+                s += " X = " + x[i] + " Y = " + y[i] + "<br/>";       
+            }
+    
+        output.innerHTML = s;
+        }
+
+        function plotValues() {
+        calculate();
+        chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'container',
+                type: 'line',
+                marginRight: 140,
+                marginBottom: 25,
+            },
+            title: {
+                text: 'Sine Curve',
+                x: -20 
+            },
+            xAxis: {
+                title: {
+                    text: 'X'
+                }
+            },
+            yAxis: {
+                title: {
+                    text: 'Y'
+                }   
+            }, 
+       
+        plotOptions: {
+                scatter: {
+                    marker: {
+                        radius: 5,
+                        states: {
+                            hover: {
+                                enabled: true,
+                                lineColor: 'rgb(150,150,150)'
+                            }
+                        }
+                    },
+                    states: {
+                        hover: {
+                            marker: {
+                                enabled: false
+                            }
+                        }
+                    }
+                }
+            },
+       
+        series: [{
+                name: 'Y Values',
+                color: 'rgba(223, 83, 83, .5)',
+                data: v
+        }]                
+        })      
+        }
+
+        $('#calculate').click( function() {
+             calculate();
+            displayValues();    
+        });
+
+        $('#plot').click( function() {
+            calculate();
+            plotValues();   
+        }); 
+        </script>
+        </div>
+        </p></div>
+        
+        <div class="a"><footer><p>Contact Me: cheyenne_osborne@daytonastate.edu</p></footer></div>
+    </body>
+
+</html>
