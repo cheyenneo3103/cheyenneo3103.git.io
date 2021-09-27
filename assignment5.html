@@ -2,12 +2,12 @@
 
 <html lang="en">
     <head>
-      <title>Assignments</title>
+      <title>Project 5</title>
         <link rel="stylesheet"
         href="styles.css">
 
-      <meta name="description" content="Assignment links for COP4813">
-      <meta name="keywords" content="HTML, CSS, JavaScript, Menus">
+      <meta name="description" content="Assignment 5 for COP4813">
+      <meta name="keywords" content="HTML, CSS, JavaScript, Canvas">
       <meta name="author" content="Cheyenne Osborne">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -54,26 +54,95 @@
             </ul>
           </nav>
         </header>
-        <h1>Assignments</h1>
-        <div class="a"><p>These are the links to Dr. Eaglin's assignments. My completed assignments can be found under the Projects menu.
+        <h1>Project 5 - Drawing on a Canvas</h1>
+        <div class="a"><p>Here is a Spirograph. The values will not change if edited.
         <br>
+        <p><a href="http://jsfiddle.net/cheyenne_osborne/ewku2dbv/">JSFiddle</a></p>
         
-        <p><a href="http://roneaglin.online/cop4813/home/assignments/assignment-1/">Assignment 1</a></p>
-        <p><a href="http://roneaglin.online/cop4813/home/assignments/assignment-2/">Assignment 2</a></p>
-        <p><a href="http://roneaglin.online/cop4813/home/assignments/assignment-3/">Assignment 3</a></p>
-        <p><a href="http://roneaglin.online/cop4813/home/assignments/assignment-4/">Assignment 4</a></p>
-        <p><a href="http://roneaglin.online/cop4813/home/assignments/assignment-5/">Assignment 5</a></p>
-        <p><a href="http://roneaglin.online/cop4813/home/assignments/assignment-6/">Assignment 6</a></p>
-        <p><a href="http://roneaglin.online/cop4813/home/assignments/assignment-7/">Assignment 7</a></p>
-        <p><a href="http://roneaglin.online/cop4813/home/assignments/assignment-8/">Assignment 8</a></p>
-        <p><a href="http://roneaglin.online/cop4813/home/assignments/assignment-9/">Assignment 9</a></p>
-        <p><a href="http://roneaglin.online/cop4813/home/assignments/assignment-10/">Assignment 10</a></p>
-        <p><a href="http://roneaglin.online/cop4813/home/assignments/assignment-11/">Assignment 11</a></p>
-        <p><a href="http://roneaglin.online/cop4813/home/assignments/assignment-12/">Assignment 12</a></p>
-        <p><a href="http://roneaglin.online/cop4813/home/assignments/assignment-13/">Assignment 13</a></p>
-        <p><a href="http://roneaglin.online/cop4813/home/assignments/assignment-14/">Assignment 14</a></p>
-        <p><a href="http://roneaglin.online/cop4813/home/assignments/assignment-15/">Assignment 15</a></p></p></div>
+        <h2>Spirograph</h2>
+        <div class="a">
+            Outer Circle Radius:<input id="R" value="125" type="number" readonly>
+            <br>
+            <br>
+            Inner Circle Radius:<input id="r" value="10" type="number" readonly>
+            <br>
+            <br>
+            Offset:<input id="O" value="50" type="number" readonly>
+            <br>
+            <br>
+            <button onclick="doDrawing();">Start Spirograph</button>
+            <br>
+            <br>
+            <canvas id="myCanvas" width="500" height="500" style="border:1px solid #d3d3d3;">
+            Your browser does not support the HTML5 canvas tag.</canvas>
+
+        <script>
+
+        var R = parseInt(document.getElementById("R").value);
+        var r = parseInt(document.getElementById("r").value);
+        var O = parseInt(document.getElementById("O").value);
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+
+
+        function doDrawing() {
+            t = 0;
+            
+            ctx.clear();
+            
+            var timesRun = 0;
+            var color =  '#'+Math.floor(Math.random()*16777215).toString(16);
+
+
+            var xCenter = c.width/2;
+            var yCenter = c.height/2;
+            let x = xCenter + Math.floor((R+r)*Math.cos(t) - (r+O)*Math.cos(((R+r)/r)*t));
+            let y = yCenter + Math.floor((R+r)*Math.sin(t) - (r+O)*Math.sin(((R+r)/r)*t));
+                
+            ctx.beginPath();
+            ctx.strokeStyle = color;
+            ctx.moveTo(x,y);
+
+            var interval = setInterval(function() {
+            timesRun += 1;
+            if(timesRun === 750) {
+                clearInterval(interval); 
+            }
+                
+            drawCircle();
+            }, 20); 
+            
+        }
         
+        function drawCircle() { 
+        t += 0.1;
+        
+        var xCenter = c.width/2;
+        var yCenter = c.height/2;
+        let x = xCenter + Math.floor((R+r)*Math.cos(t) - (r+O)*Math.cos(((R+r)/r)*t));
+        let y = yCenter + Math.floor((R+r)*Math.sin(t) - (r+O)*Math.sin(((R+r)/r)*t));
+            
+        ctx.lineTo(x,y);  
+        ctx.stroke();
+        }
+
+        CanvasRenderingContext2D.prototype.clear = 
+        CanvasRenderingContext2D.prototype.clear || function (preserveTransform) {
+            if (preserveTransform) {
+            this.save();
+            this.setTransform(1, 0, 0, 1, 0, 0);
+            }
+
+            this.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+            if (preserveTransform) {
+            this.restore();
+            }           
+        };
+ 
+        </script>
+        </div>
+        </p></div>
         
         <div class="a"><footer><p>Contact Me: cheyenne_osborne@daytonastate.edu</p></footer></div>
     </body>
