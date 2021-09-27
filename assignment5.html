@@ -55,21 +55,15 @@
           </nav>
         </header>
         <h1>Project 5 - Drawing on a Canvas</h1>
-        <div class="a"><p>Here is a Spirograph. The values will not change if edited.
+        <div class="a"><p>This is a Spirograph. 
+          <br>
+          Refresh the page for a new type of Spirograph with different values.
         <br>
         <p><a href="http://jsfiddle.net/cheyenne_osborne/ewku2dbv/">JSFiddle</a></p>
         
         <h2>Spirograph</h2>
         <div class="a">
-            Outer Circle Radius:<input id="R" value="125" type="number" readonly>
-            <br>
-            <br>
-            Inner Circle Radius:<input id="r" value="10" type="number" readonly>
-            <br>
-            <br>
-            Offset:<input id="O" value="50" type="number" readonly>
-            <br>
-            <br>
+
             <button onclick="doDrawing();">Start Spirograph</button>
             <br>
             <br>
@@ -78,10 +72,10 @@
 
         <script>
 
-        var R = parseInt(document.getElementById("R").value);
-        var r = parseInt(document.getElementById("r").value);
-        var O = parseInt(document.getElementById("O").value);
+        var R = Math.floor(Math.random() * Math.floor(100))
         var c = document.getElementById("myCanvas");
+        var r = Math.floor(Math.random() * Math.floor(70))
+        var O = Math.floor(Math.random() * Math.floor(100))
         var ctx = c.getContext("2d");
 
 
@@ -105,7 +99,7 @@
 
             var interval = setInterval(function() {
             timesRun += 1;
-            if(timesRun === 750) {
+            if(timesRun === 1050) {
                 clearInterval(interval); 
             }
                 
