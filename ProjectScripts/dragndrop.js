@@ -24,7 +24,7 @@ function allowDiscard(ev) {
   
   for (x=0; x < cardCode.length; x++){
     for (i = 1; i < 14; i++){
-      var url = "deckofcards/" + cardCode[x] + i + ".png";
+      var url = "DeckOfCards/" + cardCode[x] + i + ".png";
       var adiv = document.createElement("img");
       adiv.setAttribute("src", url);
       adiv.setAttribute("class", "card");
