@@ -164,4 +164,45 @@ display: block;
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #BD8594;}
+
+/*===============================================================================================================*/
+
+/*Deck of Cards*/
+.cardPlaceholder{
+  float: right;
+  padding: 10px;
+  border: 1px solid black;
+}		
+
+.discardPile{
+  background-image:url(/DeckOfCards/discard.png);
+  background-repeat: no-repeat;
+  display:inline-block;
+  padding:20px;
+  margin-right: 10px;
+  margin-top:10px;
+  height:200px;
+  width:150px;
+}		
+
+.card{
+  border: 1px solid black;
+  margin: 2px;
+}		
+
+.playingArea{
+  text-align:center;
+  display:block;
+  padding:10px;
+  width:auto;
+  height:600px;
+  margin:10px;
+  margin-top:10px;
+}
+
+.cardArea{
+  width:auto; 
+  max-width: 1300px;
+  padding-bottom:75px;
+}
   

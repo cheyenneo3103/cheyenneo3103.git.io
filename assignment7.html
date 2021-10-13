@@ -2,11 +2,11 @@
 
 <html lang="en">
     <head>
-      <title>Projects</title>
+      <title>Project 7</title>
         <link rel="stylesheet"
         href="styles.css">
 
-      <meta name="description" content="Completed projects for COP4813">
+      <meta name="description" content="Assignment 6 for COP4813">
       <meta name="keywords" content="HTML, CSS, JavaScript">
       <meta name="author" content="Cheyenne Osborne">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,28 +56,22 @@
                 </ul>
             </nav>
         </header>
-        <h1>My Projects</h1>
-        <div class="a"><p>This page will hold links to my completed assignments as the semester progresses.
-          To view the original assignment link, visit the Assignments Page.
-        </p>
-          <p><a href="index.html">Project 1 - Hello World</a></p>
-          <p><a href="assignment2.html">Project 2 - Menus</a></p>
-          <!---<p><a href="assignment3alt.html">Project 3 - Form Validation</a></p>--->
-          <p><a href="assignment3.html">Project 3 - Form Validation</a></p>
-          <p><a href="assignment4.html">Project 4 - Equation Plotting</a></p>
-          <p><a href="assignment5.html">Project 5 - Drawing Canvas</a></p>
-          <p><a href="assignment6.html">Project 6 - JSON & jQuery</a></p>
-          <p><a href="assignment7.html">Project 7 - Drag and Drop</a></p>
-          <p>Project 8 - Project Client</p>
-          <p>Project 9 - Animation</p>
-          <p>Project 10 - Mobile Compatibility</p>
-          <p>Project 11 - Advising Page</p>
-          <p>Project 12 - Content Management Systems</p>
-          <p>Project 13 - Game Design</p>
-          <p>Project 14 - Game Implementation</p>
-          <p>Project 15 - Learning Introspective</p></div>
+        <h1>Project 7 - Drag and Drop</h1>
+        <div class="a"><p>Below is a deck of cards that can be dealt with a trash can to discard the cards. 
+          <br>
+          <br>
+          <input type="button" value="Deal Cards" onclick="displayCards();">
+          <input type="reset" value="Clear" onclick="window.location.reload()">
 
+          <script src="ProjectScripts/dragndrop.js"></script>
 
+          <div class="playingArea">
+          <br>
+          <div id="discardPile" class="discardPile" ondrop="drop(event)" ondragover="allowDiscard(event)"></div>
+          <div id="cardArea" class="cardArea"></div>
+          </div>
+
+        </p></div>  
         <div class="a"><footer><p>Contact Me: cheyenne_osborne@daytonastate.edu</p></footer></div>
     </body>
 
