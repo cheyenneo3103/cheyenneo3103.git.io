@@ -1,7 +1,6 @@
 function allowDiscard(ev) {
   ev.preventDefault();
   document.getElementById("discardPile").innerHTML = '';
-  alert("You discarded a card.");
   }
 
   function drag(ev) {
@@ -13,6 +12,7 @@ function allowDiscard(ev) {
   var data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
   xyz.push(data);
+  alert("You discarded a card.");
   }
 
   var xyz = [];
