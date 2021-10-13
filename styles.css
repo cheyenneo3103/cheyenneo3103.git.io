@@ -175,7 +175,7 @@ display: block;
 }		
 
 .discardPile{
-  background-image:url(/DeckOfCards/discard.png);
+  background-image:url(DeckOfCards/discard.png);
   background-repeat: no-repeat;
   display:inline-block;
   padding:20px;
