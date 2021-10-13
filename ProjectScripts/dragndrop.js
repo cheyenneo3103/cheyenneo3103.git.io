@@ -1,6 +1,7 @@
 function allowDiscard(ev) {
-    ev.preventDefault();
+  ev.preventDefault();
   document.getElementById("discardPile").innerHTML = '';
+  alert("You discarded a card.");
   }
 
   function drag(ev) {
