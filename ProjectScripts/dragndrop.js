@@ -12,7 +12,9 @@ function allowDiscard(ev) {
   var data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
   xyz.push(data);
+  
   alert("You discarded a card.");
+  document.getElementById("discardPile").innerHTML = ''
   }
 
   var xyz = [];
