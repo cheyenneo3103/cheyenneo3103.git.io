@@ -2,12 +2,12 @@
 
 <html lang="en">
     <head>
-      <title>Project 4</title>
+      <title>Project 5</title>
         <link rel="stylesheet"
         href="styles.css">
 
-      <meta name="description" content="Assignment 4 for COP4813">
-      <meta name="keywords" content="HTML, CSS, JavaScript, Menus">
+      <meta name="description" content="Assignment 5 for COP4813">
+      <meta name="keywords" content="HTML, CSS, JavaScript, Canvas">
       <meta name="author" content="Cheyenne Osborne">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -57,50 +57,25 @@
             </ul>
           </nav>
         </header>
-        
-        <style>
-            div {
-                margin: auto; 
-                width: auto;
-                text-align: center;
-            }           
-        </style>
-
-        <h1>Project 4 - Graphing</h1>
-        <div class="a"><p>Here is a Sine Function Graph.
+        <h1>Project 9 - Animation</h1>
+        <div class="a"><p>Refresh the page to restart the animation.
+          <br>
+          Click on the ball to change the size by a random amount.
         <br>
-        <p><a href="http://jsfiddle.net/cheyenne_osborne/1h7d9pfc/">JSFiddle</a></p>
         
-        <h2>Sine Transformation Calculator</h2>
-        <div class="b">
-        y = a sin (bx + c) + d<br/><br/>
+        <h2>Animated Ball</h2>
+        <div class="a">
 
-        <label for="a">Amplitude a: </label>
-        <input type="text" name="a" id="a" size="5" value="4"/><br>
-        <label for="a">Period b: </label>
-        <input type="text" name="b" id="b" size="5" value="1" /><br>
-        <label for="a">Phase Shift c: </label>
-        <input type="text" name="c" id="c" size="5" value="2"/><br>
-        <label for="a">Vertical Shift d: </label>
-        <input type="text" name="d" id="d" size="5" value="3"/><br>
-        <label for="a">X Min</label>
-        <input type="text" name="xmin" id="xmin" value="-10" size="5"/><br>
-        <label for="a">X Max</label>
-        <input type="text" name="xmax" id="xmax" value="10" size="5" /><br><br>
-    
-        <input type="button" value="Calculate" id="calculate"/>
-        <input type="button" value="Plot" id="plot"/>
+            <button onclick="startBall();">Start Animation</button>
+            <br>
+            <br>
+            <canvas id="myCanvas" onclick="changeSize()" width="500" height="500" style="border:1px solid #d3d3d3;">
+            Your browser does not support the HTML5 canvas tag.</canvas>
 
-        <br/><br/>
-        <p id="output"> </p> 
-        <div id="container"><br><br> </div>
-
-        <script src="https://code.highcharts.com/highcharts.js"></script>
-        <script src="jquery-3.6.0.min.js"></script>
-        <script src="/ProjectScripts/plotting.js"></script>
+            <script src="ProjectScripts/animation.js"></script>
         
         </div>
-        </p></div>   
+        </p></div> 
         <div class="a"><footer><p>Contact Me: cheyenne_osborne@daytonastate.edu</p></footer></div>
     </body>
 
