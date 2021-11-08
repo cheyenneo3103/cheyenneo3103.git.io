@@ -2,11 +2,11 @@
 
 <html lang="en">
     <head>
-      <title>Project 6</title>
+      <title>Project 11</title>
         <link rel="stylesheet"
         href="styles.css">
 
-      <meta name="description" content="Assignment 6 for COP4813">
+      <meta name="description" content="Assignment 11 for COP4813">
       <meta name="keywords" content="HTML, CSS, JavaScript, JSON, jQuery">
       <meta name="author" content="Cheyenne Osborne">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,16 +58,24 @@
                 </ul>
             </nav>
         </header>
-        <h1>Project 6 - JSON and jQuery</h1>
-        <div class="a"><p>Below is a table populated with JSON data about my favorite or most played video games. 
-          <br>       
-          <script src="jquery-3.6.0.min.js"></script>
+        <h1>Project 11 - Class Advisor</h1>
+        <div class="a"><p>Below is a Class Advisor that uses JSON data to display available classes 
+          depending on if prerequisites were met. Only one class can be marked of the same letter (A-E).
           <br>
-          <button onclick = "constructTable('#table')">View Games</button>     
-          <br>
+          <script src="jquery-3.6.0.min.js"></script>    
+          <style>           
+            .box{
+                margin-top: auto;
+                margin: auto; 
+                width: 100%;
+                text-align: left;
+            }
+
+        </style>
+
+          <div id="box" style="color:black" class="box"></div>
           <br>        
-          <table id="table" value=""></table>   
-          <script src="ProjectScripts/jsonarray.js"></script>
+          <script src="ProjectScripts/advising.js"></script>
 
         </p></div>
         <div class="a"><footer><p>Contact Me: cheyenne_osborne@daytonastate.edu</p></footer></div>
