@@ -1,6 +1,7 @@
 var list = [
     { "System": "WordPress", 
-    "Produced/Sold By": "Free/Open Source", 
+    "Produced/Sold By": ["Free/Open Source",
+    "<br><br>WordPress Foundation"], 
     "Technology Base": ["PHP", 
     "<br><br>MySQL"], 
     "Major Capabilities": ["Many templates and plugins", 
@@ -23,7 +24,8 @@ var list = [
     "Example": "<a href='https://www.wenxinwendyju.com/'>https://www.wenxinwendyju.com/</a>" },
 
     { "System": "Joomla", 
-    "Produced/Sold By": "Free/Open Source", 
+    "Produced/Sold By": ["Free/Open Source",
+    "<br><br>Open Source Matters, Inc."], 
     "Technology Base": ["PHP",
     "<br><br>MySQL"], 
     "Major Capabilities": ["Lots of flexibility when creating a site",
