@@ -34,6 +34,10 @@ td {
   border: 1px solid black;
   font-weight: lighter;
   font-size: 16px;
+
+  overflow: hidden; /*testing*/
+  text-overflow: ellipsis; /*testing*/
+  word-wrap: break-word; /*testing*/
 }
 
 th,td {
@@ -49,16 +53,17 @@ th{
   font-size: 20px;
 }
 
-
 table {
   margin: 0 auto;
   font-size: large;
   border: 1px solid black;
+
+  table-layout: fixed; /*testing*/
 }
 
 div {
     margin: auto; 
-    width: 100px; /*change to 100px after a4*/
+    width: 100px;
     text-align: center;
 }
 
