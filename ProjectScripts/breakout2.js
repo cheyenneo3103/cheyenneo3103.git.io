@@ -134,6 +134,7 @@ function startGame() {
         destructR++;
       }
       else if (bricks[randomRowR][randomColR].status == 0) {
+        dy = -dy;
         bricks[randomRowR][randomColR].status++;
         score--;
         destructR++;
